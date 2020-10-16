@@ -12,5 +12,21 @@ namespace DatingApp.Models
         public int Id { get; set; }
         public string UserName { get; set; } 
 
+
+        public List<AppUser> Users { get; set; }
+
+        public void Test()
+        {
+           
+
+            var test1 = 5;
+            var test2 = 5;
+
+            var total = test1 * test2;
+
+            Console.WriteLine(total);
+            
+
+        }
     }
 }
