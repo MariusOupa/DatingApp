@@ -1,0 +1,11 @@
+﻿What is it?
+->Its an object Relational Mapper
+->Translates our code into SQL commands that update our tables in the database
+
+
+## Entity
+-> AppUser.class
+
+## ENtirity Framework
+-> Need DbContext - Acts as a bridge between our entity class and Database
+
