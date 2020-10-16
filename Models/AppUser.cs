@@ -13,7 +13,7 @@ namespace DatingApp.Models
         public string UserName { get; set; } 
 
 
-        public List<AppUser> Users { get; set; }
+       
 
     }
 }
