@@ -15,6 +15,5 @@ namespace DatingApp.Models
 
         public List<AppUser> Users { get; set; }
 
-        
     }
 }
