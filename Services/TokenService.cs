@@ -30,7 +30,7 @@ namespace DatingApp.Services
             {
                 Subject = new ClaimsIdentity(new[] { new Claim("id", user.UserName.ToString()) }),
                 Expires = DateTime.Now.AddDays(7),
-                SigningCredentials = creds
+                SigningCredentials = creds 
             };
             var tokenHandler = new JwtSecurityTokenHandler();
 
