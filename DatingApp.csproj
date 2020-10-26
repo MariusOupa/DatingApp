@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.0-rc.2.20475.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.0-rc.2.20475.6" />
@@ -31,7 +32,6 @@
     <Folder Include="client\src\app\_guard\" />
     <Folder Include="client\src\app\_services\" />
     <Folder Include="client\SSL\" />
-    <Folder Include="NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>
