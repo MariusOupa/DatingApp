@@ -20,33 +20,37 @@ import { TestErrorsComponent } from './Errors/test-errors/test-errors.component'
 import { ErrorInterceptor } from './_interceptor/error.interceptor';
 import { NotFoundComponent } from './Errors/not-found/not-found.component';
 import { ServerErrorComponent } from './Errors/server-error/server-error.component';
+import { MemberCardComponent } from './members/member-card/member-card.component';
+import { JwtInterceptor } from './_interceptor/jwt.interceptor';
 
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        NavComponent,
-        HomeComponent,
-        RegisterComponent,
-        MemberListComponent,
-        MemberDetailComponent,
-        ListsComponent,
-        MessagesComponent,
-        TestErrorsComponent,
-        NotFoundComponent,
-        ServerErrorComponent
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        FormsModule,
-        SharedModule
-    ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+  declarations: [
+    AppComponent,
+    NavComponent,
+    HomeComponent,
+    RegisterComponent,
+    MemberListComponent,
+    MemberDetailComponent,
+    ListsComponent,
+    MessagesComponent,
+    TestErrorsComponent,
+    NotFoundComponent,
+    ServerErrorComponent,
+    MemberCardComponent
   ],
-    bootstrap: [AppComponent]
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    SharedModule
+  ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
