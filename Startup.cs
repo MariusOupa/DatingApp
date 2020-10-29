@@ -37,6 +37,7 @@ namespace DatingApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddApplicationServices(_config);
+            
             services.AddControllers();
             services.AddCors();
             services.AddIdentityServices(_config);
@@ -61,6 +62,8 @@ namespace DatingApp
             {
                 endpoints.MapControllers();
             });
+
+            
         }
     }
 }

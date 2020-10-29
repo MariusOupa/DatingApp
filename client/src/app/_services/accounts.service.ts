@@ -4,11 +4,13 @@ import { map } from 'rxjs/operators';
 import { Local } from 'protractor/built/driverProviders';
 import { User } from '../Models/user';
 import { ReplaySubject } from 'rxjs';
+import { environment } from '../../environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AccountsService {
-  baseUrl = 'https://localhost:44342/';
+  baseUrl = environment.apiUrl;
   private currentUserSource = new ReplaySubject<User>(1);
   currentUser$ = this.currentUserSource.asObservable();
 
