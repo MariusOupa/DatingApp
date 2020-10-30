@@ -28,9 +28,10 @@ namespace DatingApp.Services
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new[] { new Claim("id", user.UserName.ToString()) }),
+                Subject = new ClaimsIdentity(new[] { new Claim("id", user.UserName.ToString()),new Claim(ClaimTypes.NameIdentifier, user.UserName.ToString()) }),
                 Expires = DateTime.Now.AddDays(7),
-                SigningCredentials = creds 
+                SigningCredentials = creds
+
             };
             var tokenHandler = new JwtSecurityTokenHandler();
 
